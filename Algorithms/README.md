@@ -9,6 +9,7 @@ The SPO Tree / SPO Forest classes consist of the following methods:
 * prune(): Not implemented for SPO Forests. Prunes the SPO Tree on a held-out validation set to prevent overfitting. Applies the CART pruning method.
 * est_decision(): outputs estimated optimal decisions given new contextual features Xnew
 * est_cost(): outputs estimated cost vectors given new contextual features Xnew
+
 Further documentation is provided in the headers of SPO_tree_greedy.py and SPOForest.py.
 
 The structure of the decision-making problem of interest should be encoded in a file called decision_problem_solver.py. This file should contain two functions specified by the practitioner:
