@@ -1,4 +1,4 @@
-# SPO Trees
+# SPO Tree
 
 This is a Python code base for training "SPO Trees" (SPOTs) from the paper "Decision Trees for Decision-Making under the Predict-then-Optimize Framework".
 
