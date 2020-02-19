@@ -14,7 +14,8 @@ Further documentation is provided in the headers of SPO_tree_greedy.py and SPOFo
 
 The structure of the decision-making problem of interest should be encoded in a file called decision_problem_solver.py. This file should contain two functions specified by the practitioner:
 * get_num_decisions(): returns number of decision variables (i.e., dimension of cost vector for underlying decision problem)
-* find_opt_decision(): returns for a matrix of cost vectors the corresponding optimal decisions for those cost vectors .
+* find_opt_decision(): returns for a matrix of cost vectors the corresponding optimal decisions for those cost vectors.
+
 Any (optional) arguments for these functions may be passed as keyword arguments to the fit() functions of the SPO Tree/Forest classes. An example is given in the Yahoo News application. The shortest path applications provide an additional example of the specification of decision_problem_solver.py.
 
 Code currently only supports Python 2.7 (not Python 3).
