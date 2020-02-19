@@ -7,8 +7,8 @@ southwest corner and tries to find shortest path to northeast corner.
 * Yahoo News: A news article recommendation decision problem constructed from the Yahoo! Front Page Today Module dataset.
 
 Datasets used in the numerical experiments may be found here:
-* Shortest Path: https://archive.org/details/spotree_data_shortestpath
-* Yahoo News: https://archive.org/details/spotree_data_yahoonews
+* Shortest Path: https://archive.org/details/spotree_shortestpathdata
+* Yahoo News: The Yahoo! Front Page Today dataset may be found at https://webscope.sandbox.yahoo.com/catalog.php?datatype=r&did=49. A license must be obtained from Yahoo to access the dataset. The data may be used only for academic research purposes and may not be used for any commercial purposes or by any commercial entity. For guidance and code on how to preprocess the dataset to replicate our numerical experiments, please contact the authors once a license is obtained.
 
 To reproduce the numerical experiments, merge into a single folder all codes in the Algorithms folder with the codes + data files (unzipped) corresponding to the application of interest. Then, run the relevant application Python script.
 
