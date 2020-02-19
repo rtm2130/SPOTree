@@ -4,14 +4,16 @@ This code considers two methods of aggregating individual tree predictions to ob
   - "mean": averages cost predictions for each tree in the forest; outputs decision associated with average cost
   - "mode": outputs the mode decision recommended by the trees in the forest
 Outputs decision costs for each test-set instance as pickle file
-Takes multiple input arguments:  
-  (1) n_train: number of training observations. can take values 200, 400, 800, 10000
-  (2) eps: parameter (\bar{\epsilon}) in the paper controlling noise in mapping from features to costs. Can take values 0, 0.25, 0.5
-  (3) deg_set_str: set of deg parameters to try, e.g. "2-4-8". 
+Takes multiple input arguments:
+  (1) n_train: number of training observations. can take values 200, 10000
+  (2) eps: parameter (\bar{\epsilon}) in the paper controlling noise in mapping from features to costs.
+    n_train = 200: can take values 0, 0.25
+    n_train = 10000: can take values 0, 0.5
+  (3) deg_set_str: set of deg parameters to try, e.g. "2-10". 
     deg = parameter "degree" in the paper controlling nonlinearity in mapping from features to costs. 
-    can try values in {2,4,6,8,10}
-  (4) reps_st, reps_end: we provide 50 total datasets corresponding to different generated B values (matrix mapping features to costs). 
-    script will run code on problem instances reps_st to reps_end  
+    can try values in {2,10}
+  (4) reps_st, reps_end: we provide 10 total datasets corresponding to different generated B values (matrix mapping features to costs). 
+    script will run code on problem instances reps_st to reps_end 
   (5) max_depth_set_str: sequence of training depths tuned using cross validation, e.g. "2-4-5"
   (6) min_samples_leaf_set_str: sequence of "min. (weighted) observations per leaf" tuned using cross validation, e.g. "20-50-100"
   (7) n_estimators_set_str: sequence of number of trees in forest tuned using cross validation, e.g. "20-50-100"
@@ -21,9 +23,11 @@ Takes multiple input arguments:
   (11) number of workers to use in parallel processing (i.e., fitting individual trees in the forest in parallel)
 Values of input arguments used in paper:
   (1) n_train: consider values 200, 10000
-  (2) eps: consider values 0, 0.25, 0.5
+  (2) eps:
+    n_train = 200: considered values 0, 0.25
+    n_train = 10000: considered values 0, 0.5
   (3) deg_set_str: "2-10"
-  (4) reps_st = 0, reps_end = 10
+  (4) reps_st, reps_end: reps_st = 0, reps_end = 10
   (5) max_depth_set_str: "1000"
   (6) min_samples_leaf_set_str: "20"
   (7) n_estimators_set_str: "100"
