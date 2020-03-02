@@ -67,18 +67,21 @@ else:
     
 ##############################################
 
-train_x = np.load('filtered_train_userFeat.npy')
-valid_x = np.load('filtered_validation_userFeat.npy')
-test_x = np.load('filtered_test_userFeat.npy')
+thresh = "50"
+valid_size = "50.0%"
+
+train_x = np.load('filtered_train_userFeat_'+valid_size+'_'+thresh+'.npy')
+valid_x = np.load('filtered_validation_userFeat_'+valid_size+'_'+thresh+'.npy')
+test_x = np.load('filtered_test_userFeat_'+valid_size+'_'+thresh+'.npy')
 
 #make negative to turn into minimization problem
-train_cost = np.load('filtered_train_clickprob.npy')*-1.0
-valid_cost = np.load('filtered_validation_clickprob.npy')*-1.0
-test_cost = np.load('filtered_test_clickprob.npy')*-1.0
+train_cost = np.load('filtered_train_clickprob_'+valid_size+'_'+thresh+'.npy')*-1.0
+valid_cost = np.load('filtered_validation_clickprob_'+valid_size+'_'+thresh+'.npy')*-1.0
+test_cost = np.load('filtered_test_clickprob_'+valid_size+'_'+thresh+'.npy')*-1.0
 
-train_weights = np.load('filtered_train_usernumobserv.npy')
-valid_weights = np.load('filtered_validation_usernumobserv.npy')
-test_weights = np.load('filtered_test_usernumobserv.npy')
+train_weights = np.load('filtered_train_usernumobserv_'+valid_size+'_'+thresh+'.npy')
+valid_weights = np.load('filtered_validation_usernumobserv_'+valid_size+'_'+thresh+'.npy')
+test_weights = np.load('filtered_test_usernumobserv_'+valid_size+'_'+thresh+'.npy')
 
 ##############################################
 #limit size of training data if specified
